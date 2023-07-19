@@ -1,0 +1,97 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.img_section {
+    background-color: #281a00d9;
+    .container {
+        .navbar {
+            .navbar-brand {
+                font-weight: bold;
+                color: white;
+                font-family: 'Dancing Script', cursive;
+                font-size: 38px;
+                letter-spacing: 1px;
+            }
+
+            .nav-item {
+                font-family: auto;
+                font-size: 28px;
+                font-weight: 200;
+                letter-spacing: 1px;
+            }
+
+            .nav-link {
+                color: white;
+
+                &.active {
+                    color: orange;
+                }
+            }
+
+            .navbar-toggler {
+                border: none;
+            }
+
+            .fa-bars,
+            .fa-xmark {
+                color: red;
+                font-size: 31px;
+            }
+        }
+    }
+
+}
+
+// No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
+
+
+@media (min-width: 576px) and (max-width: 767px){
+    .img_section {
+        .container {
+            .navbar {
+                .navbar-brand{
+                    font-size: 34px;
+                }
+                .nav-item {
+                    font-size: 22px;
+                }
+                .navbar-toggler {
+                    border: none;
+                }
+    
+                .fa-bars,
+                .fa-xmark {
+                    font-size: 28px;
+                }
+            }
+        }
+    
+    }
+    
+ }
+
+ @media (min-width: 300px) and (max-width: 575px){
+    .img_section {
+        .container {
+            .navbar {
+                .navbar-brand {
+                    font-size: 31px;
+                }
+    
+                .nav-item {
+                    font-size: 19px;
+                }
+                .fa-bars,
+                .fa-xmark {
+                    font-size: 22px;
+                }
+            }
+        }
+    
+    }
+    
+ }
+
+

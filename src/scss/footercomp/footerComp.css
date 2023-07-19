@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+.footersection {
+  min-height: 332px;
+  background-color: rgba(40, 26, 0, 0.8509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.footersection .card .card-title {
+  font-size: 37px;
+  font-family: "Dancing Script", cursive;
+}
+.footersection .card .card-text {
+  font-size: 17px;
+}
+.footersection .card .card-text .fa-solid, .footersection .card .card-text .fa-regular {
+  font-size: 14px;
+}
+.footersection .card .card-text:hover {
+  color: orange;
+  cursor: pointer;
+}
+.footersection .iconsection {
+  width: 29px;
+  height: 28px;
+  background: white;
+  border-radius: 100%;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+}
+.footersection .iconsection .fa-brands {
+  color: black;
+  z-index: 2;
+}
+.footersection .iconsection .fa-brands:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .footersection .card .card-title {
+    font-size: 33px;
+  }
+  .footersection .card .card-text {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=footercomp.css.map */

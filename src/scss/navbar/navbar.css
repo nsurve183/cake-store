@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+.img_section {
+  background-color: rgba(40, 26, 0, 0.8509803922);
+}
+.img_section .container .navbar .navbar-brand {
+  font-weight: bold;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+.img_section .container .navbar .nav-item {
+  font-family: auto;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.img_section .container .navbar .nav-link {
+  color: white;
+}
+.img_section .container .navbar .nav-link.active {
+  color: orange;
+}
+.img_section .container .navbar .navbar-toggler {
+  border: none;
+}
+.img_section .container .navbar .fa-bars,
+.img_section .container .navbar .fa-xmark {
+  color: red;
+  font-size: 31px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .img_section .container .navbar .navbar-brand {
+    font-size: 34px;
+  }
+  .img_section .container .navbar .nav-item {
+    font-size: 22px;
+  }
+  .img_section .container .navbar .navbar-toggler {
+    border: none;
+  }
+  .img_section .container .navbar .fa-bars,
+  .img_section .container .navbar .fa-xmark {
+    font-size: 28px;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .img_section .container .navbar .navbar-brand {
+    font-size: 31px;
+  }
+  .img_section .container .navbar .nav-item {
+    font-size: 19px;
+  }
+  .img_section .container .navbar .fa-bars,
+  .img_section .container .navbar .fa-xmark {
+    font-size: 22px;
+  }
+}/*# sourceMappingURL=navbar.css.map */

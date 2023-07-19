@@ -1,0 +1,50 @@
+
+
+
+.contactsection{
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+    .contact_title{
+        font-size: 47px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .container{
+        ::placeholder{
+            font-size: 17px;
+        }
+        .text_lable{
+            font-size: 17px;
+        }
+
+        .btn {
+            background: orange;
+            border-radius: 0px;
+            padding: 9px 38px;
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .productsection{
+        .product_title{
+            font-size: 37px;
+        }
+    }
+    }
+
+@media (min-width: 300px) and (max-width: 575px){
+.contactsection{
+    .contact_title{
+        font-size: 33px;
+    }
+}
+}

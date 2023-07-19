@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.productsection{
+    min-height: 400px;
+    background-color: #281a00d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+
+    .product_title{
+        font-size: 47px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .product{
+        min-height: 328px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+        border-radius: 20px;
+        .img-fluid{
+            height: 223px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .productsection{
+        .product_title{
+            font-size: 37px;
+        }
+    }
+    }
+
+@media (min-width: 300px) and (max-width: 575px){
+.productsection{
+    .product_title{
+        font-size: 33px;
+    }
+}
+}
+

@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.aboutsection{
+    .container{
+        .card{
+            .card-title{
+                font-family: 'Dancing Script', cursive;
+                font-size: 44px;
+            }
+            .card-text{
+                font-size: 16px;
+                font-family: inherit;
+            }
+            .btn {
+                background: orange;
+                border-radius: 0px;
+                padding: 9px 38px;
+                font-size: 16px;
+                color: white;
+                font-weight: 700;
+                font-family: sans-serif;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 767px) and (max-width: 990px){
+    .aboutsection{
+        .container{
+            .card{
+                .card-title{
+                    font-size: 37px;
+                }
+                .card-text{
+                    font-size: 15px;
+                }
+                .btn {
+                    background: orange;
+                    border-radius: 0px;
+                    padding: 9px 38px;
+                    font-size: 16px;
+                    color: white;
+                    font-weight: 700;
+                    font-family: sans-serif;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 575px){
+    .aboutsection{
+        .container{
+            .card{
+                .card-title{
+                    font-size: 33px;
+                }
+                .card-text{
+                    font-size: 14px;
+                }
+                .btn {
+                    background: orange;
+                    border-radius: 0px;
+                    padding: 9px 38px;
+                    font-size: 14px;
+                    color: white;
+                    font-weight: 700;
+                    font-family: sans-serif;
+                }
+            }
+        }
+    }
+}
