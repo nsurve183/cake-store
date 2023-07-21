@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0px;
+  padding: 30px 0px;
 }
 .productsection .product_title {
   font-size: 47px;
@@ -20,6 +20,8 @@
   flex-direction: column;
   background: white;
   border-radius: 20px;
+  text-decoration: none;
+  color: black;
 }
 .productsection .product .img-fluid {
   height: 223px;

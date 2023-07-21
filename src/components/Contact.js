@@ -4,7 +4,7 @@ import '../scss/contact/contact.css'
 const Contact = () => {
   return (
     <div>
-      <div className="contactsection mb-4">
+      <div className="contactsection mt-lg-5 mt-4 mb-4">
         <h1 className='contact_title mb-4'>Contact Us</h1>
         <div className="container">
           <form className="row g-3 d-flex justify-content-center align-items-center  text-center">

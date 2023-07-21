@@ -1,0 +1,33 @@
+.viewsection {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0px 30px 0px;
+}
+.viewsection .reply_title {
+  font-size: 47px;
+  font-family: "Dancing Script", cursive;
+}
+.viewsection .carousel {
+  padding: 0px 0px 94px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 59px 0px;
+}
+.viewsection .carousel .card {
+  border: 4px solid rgba(128, 128, 128, 0.07);
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .viewsection .reply_title {
+    font-size: 37px;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .viewsection .reply_title {
+    font-size: 33px;
+  }
+}/*# sourceMappingURL=views.css.map */

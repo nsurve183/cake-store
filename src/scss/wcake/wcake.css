@@ -1,0 +1,51 @@
+.wsection {
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+}
+.wsection .wtitle {
+  font-size: 47px;
+  font-family: "Dancing Script", cursive;
+}
+.wsection .container .card .card-img-top {
+  height: 250px;
+}
+.wsection .serachsection {
+  min-height: 87px;
+  border: 1px solid rgba(193, 193, 200, 0.321);
+  padding: 10px;
+}
+.wsection .serachsection .search_title {
+  border-left: 5px solid rgb(121, 121, 226);
+  padding-left: 5px;
+}
+.wsection .serachsection .search_bar {
+  display: flex;
+  margin-top: 15px;
+}
+
+.recentItems {
+  min-height: 87px;
+  border: 1px solid rgba(193, 193, 200, 0.321);
+  padding: 10px;
+  position: relative;
+}
+.recentItems .card .img {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+}
+.recentItems .card .rtitle {
+  font-size: 15px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .wsection .wtitle {
+    font-size: 37px;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .wsection .wtitle {
+    font-size: 37px;
+  }
+}/*# sourceMappingURL=wcake.css.map */

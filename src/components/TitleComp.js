@@ -2,6 +2,7 @@
 
 import React from 'react'
 import '../scss/titlecomp/title.css'
+import { NavLink } from 'react-bootstrap'
 
 const TitleComp = () => {
     return (
@@ -22,13 +23,13 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <a href="#" className="btn">Order Now</a>
+                                                <NavLink  className="btn">Order Now</NavLink>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-lg-6 col-md-5 col-12">
-                                        <img src="/images/slider-img.png" className="img-fluid" alt="Image Not Found" />
+                                        <img src="/images/slider-img.png" className="img-fluid" alt=''/>
                                     </div>
                                 </div>
                             </div>
@@ -41,13 +42,13 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <a href="#" className="btn">Order Now</a>
+                                                <NavLink className="btn">Order Now</NavLink>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-lg-6 col-md-5 col-12">
-                                        <img src="/images/slider-img.png" className="img-fluid" alt="Image Not Found" />
+                                        <img src="/images/slider-img.png" className="img-fluid" alt='' />
                                     </div>
                                 </div>
                             </div>
@@ -60,13 +61,13 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <a href="#" className="btn">Order Now</a>
+                                                <NavLink className="btn">Order Now</NavLink>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-lg-6 col-md-5 col-12">
-                                        <img src="/images/slider-img.png" className="img-fluid" alt="Image Not Found" />
+                                        <img src="/images/slider-img.png" className="img-fluid"  alt=''/>
                                     </div>
                                 </div>
                             </div>

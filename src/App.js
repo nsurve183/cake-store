@@ -15,6 +15,11 @@ import {
   Routes
 } from 'react-router-dom'
 
+import WeddingCake from './components/caketypes/WeddingCake'
+import BirthdayCake from './components/caketypes/BirthdayCake'
+import Cupcake from './components/caketypes/Cupcake'
+import PartyCake from './components/caketypes/PartyCake'
+
 
 const App = () => {
   return (
@@ -26,6 +31,10 @@ const App = () => {
           <Route exact path='/about' Component={About}/>
           <Route exact path='/product' Component={Product}/>
           <Route exact path='/contact' Component={Contact}/>
+          <Route exact path='/weddingcake' Component={WeddingCake}/>
+          <Route exact path='/birthdaycake' Component={BirthdayCake}/>
+          <Route exact path='/cupcake' Component={Cupcake}/>
+          <Route exact path='/partycake' Component={PartyCake}/>
         </Routes>
         <FooterComp />
       </Router>

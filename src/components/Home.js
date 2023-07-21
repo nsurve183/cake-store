@@ -6,7 +6,7 @@ import CakesTypes from './CakesTypes';
 import About from './About';
 import Product from './Product';
 import Contact from './Contact';
-
+import Views from './Views';
 
 function Home() {
   return (
@@ -15,6 +15,7 @@ function Home() {
       <CakesTypes />
       <About />
       <Product />
+      <Views />
       <Contact />
     </div>
   )
