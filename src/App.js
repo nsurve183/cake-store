@@ -7,6 +7,7 @@ import About from './components/About'
 import Product from './components/Product'
 import Contact from './components/Contact'
 import FooterComp from './components/FooterComp'
+import CakeState from './context/cakes/CakeState'
 
 
 import {
@@ -24,6 +25,7 @@ import PartyCake from './components/caketypes/PartyCake'
 const App = () => {
   return (
     <>
+    <CakeState>
       <Router>
       <NavbarComp/>
         <Routes>
@@ -38,6 +40,7 @@ const App = () => {
         </Routes>
         <FooterComp />
       </Router>
+      </CakeState>
     </>
   )
 }

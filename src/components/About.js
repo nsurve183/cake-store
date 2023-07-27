@@ -9,7 +9,7 @@ const About = () => {
         <div className="container">
           <div className="row d-flex justify-content-between align-items-center ">
             <div className="col-lg-6 col-md-5 col-12 order-md-1 order-2">
-              <img src="/images/about-img.png" className='img-fluid' alt="image not found" />
+              <img src="/images/about-img.png" className='img-fluid' alt="..." />
             </div>
             <div className="col-lg-6 col-md-7 col-12 mt-md-0 mt-4 order-md-2 order-1  mt-md-0 mb-4">
               <div className="card border-0 text-md-start text-center">

@@ -5,7 +5,6 @@ import '../scss/footercomp/footercomp.scss'
 
 const FooterComp = () => {
     const footerDate = new Date().getFullYear()
-    console.log(footerDate)
     return (
         <div>
             <div className="footersection">

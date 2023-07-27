@@ -11,28 +11,28 @@ const Product = () => {
             <div className="row">
               <div className="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
                 <NavLink className="product" to={'/weddingcake'}>
-                    <img src="/images/cake2.jpg" className='img-fluid mb-3' alt="image not found" />
+                    <img src="/images/cake2.jpg" className='img-fluid mb-3' alt="..." />
                     <h4 className='mb-3'>Weeding Cake</h4>
                     <h6>Rs.800/-</h6>
                 </NavLink>
               </div>
               <div className="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
               <NavLink className="product" to={'/birthdaycake'}>
-                    <img src="/images/cake1.png" className='img-fluid mb-3' alt="image not found" />
+                    <img src="/images/cake1.png" className='img-fluid mb-3' alt="..." />
                     <h4 className='mb-3'>Birthday Cake</h4>
                     <h6>Rs.800/-</h6>
                 </NavLink>
               </div>
               <div className="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
               <NavLink className="product" to={'/cupcake'}>
-                    <img src="/images/cup-cake.jpeg" className='img-fluid mb-3' alt="image not found" />
+                    <img src="/images/cup-cake.jpeg" className='img-fluid mb-3' alt="..." />
                     <h4 className='mb-3'>Cup Cake</h4>
                     <h6>Rs.800/-</h6>
                 </NavLink>
               </div>
               <div className="col-lg-3 col-md-6 col-12">
               <NavLink className="product" to={'/partycake'}>
-                    <img src="/images/p2.png" className='img-fluid mb-3' alt="image not found" />
+                    <img src="/images/p2.png" className='img-fluid mb-3' alt="..." />
                     <h4 className='mb-3'>Party Cake</h4>
                     <h6>Rs.800/-</h6>
                 </NavLink>
