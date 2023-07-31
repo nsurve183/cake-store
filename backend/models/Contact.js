@@ -15,12 +15,10 @@ const contactSchema = mongoose.Schema({
     email: {
         type: String,
         require: true,
-        unique: true
     },
     phnumber: {
         type: Number,
         require: true,
-        unique: true
     },
     massage: {
         type: String,

@@ -8,6 +8,7 @@ import Product from './components/Product'
 import Contact from './components/Contact'
 import FooterComp from './components/FooterComp'
 import CakeState from './context/cakes/CakeState'
+import ReduceCode from './components/ReduceCode'
 
 
 import {
@@ -15,12 +16,6 @@ import {
   Route,
   Routes
 } from 'react-router-dom'
-
-import WeddingCake from './components/caketypes/WeddingCake'
-import BirthdayCake from './components/caketypes/BirthdayCake'
-import Cupcake from './components/caketypes/Cupcake'
-import PartyCake from './components/caketypes/PartyCake'
-
 
 const App = () => {
   return (
@@ -33,10 +28,10 @@ const App = () => {
           <Route exact path='/about' Component={About}/>
           <Route exact path='/product' Component={Product}/>
           <Route exact path='/contact' Component={Contact}/>
-          <Route exact path='/weddingcake' Component={WeddingCake}/>
-          <Route exact path='/birthdaycake' Component={BirthdayCake}/>
-          <Route exact path='/cupcake' Component={Cupcake}/>
-          <Route exact path='/partycake' Component={PartyCake}/>
+          <Route exact path='/weddingcake' Component={ReduceCode}/>
+          <Route exact path='/birthdaycake' Component={ReduceCode}/>
+          <Route exact path='/cupcake' Component={ReduceCode}/>
+          <Route exact path='/partycake' Component={ReduceCode}/>
         </Routes>
         <FooterComp />
       </Router>

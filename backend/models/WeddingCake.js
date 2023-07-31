@@ -1,9 +1,8 @@
 
-
-
 const mongoose = require('mongoose');
 
-const chocolateCkaeSchema = mongoose.Schema({
+// wedding cake schema
+const WeddingCakeSchema = mongoose.Schema({
     title: {
         type: String,
         require: true
@@ -22,4 +21,4 @@ const chocolateCkaeSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('chocolateCake', chocolateCkaeSchema);
+module.exports = mongoose.model('weddingcake', WeddingCakeSchema);

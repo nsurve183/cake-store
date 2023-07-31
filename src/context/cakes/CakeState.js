@@ -9,7 +9,9 @@ const CakeState = (props) => {
 
 
     // this state for userviews
-    const [view, setViews] = useState([]);
+    const [view, setViews] = useState([])
+    
+  
 
     // this state for contact page
     const [contact, setcontact] = useState([])
@@ -45,6 +47,46 @@ const CakeState = (props) => {
     }
 
 
+    
+      // this state for fetch cakes category data
+      const [birthdaycakedata, setBirthCakeData] = useState([])
+    // fetch birth day cake data
+    const getBirthDayCakesData = async () => {
+        const response = await fetch(`${host}/api/cakescategory/getbirthdaycakes`, {
+            method: "GET"
+        })
+        let birthdaycake = await response.json()
+        setBirthCakeData(birthdaycake)
+    }
+
+    const getWeddingCakes = async () => {
+        const response = await fetch(`${host}/api/cakescategory/getweddingcakes`, {
+            method: "GET"
+        })
+        let birthdaycake = await response.json()
+        setBirthCakeData(birthdaycake)
+    }
+
+    const getCupCakes = async () => {
+        const response = await fetch(`${host}/api/cakescategory/getCupCakes`, {
+            method: "GET"
+        })
+        let cupcakes = await response.json()
+        setBirthCakeData(cupcakes)
+    }
+
+    const getPartyCake = async () => {
+        const response = await fetch(`${host}/api/cakescategory/getpartycakes`, {
+            method: "GET"
+        })
+        let partycake = await response.json()
+        setBirthCakeData(partycake)
+    }
+
+
+
+
+
     // add user data for contact cakkery
     const addContactUser = async (fname, lname, email, phnumber, massage) => {
         const response = await fetch(`${host}/api/contact/usercontact`, {
@@ -60,7 +102,7 @@ const CakeState = (props) => {
 
     return(
         <>
-            <CakeContext.Provider value={{view, getViewData, totalrecords, postperpage, currentPage, setcurrentPage, addContactUser, errorAlert, showAlert}}>
+            <CakeContext.Provider value={{view, getViewData, totalrecords, postperpage, currentPage, birthdaycakedata, setcurrentPage, addContactUser, errorAlert, showAlert, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake}}>
                 {props.children}
             </CakeContext.Provider>
         </>

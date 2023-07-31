@@ -2,7 +2,7 @@
 
 import React from 'react'
 import '../scss/titlecomp/title.css'
-import { NavLink } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const TitleComp = () => {
     return (
@@ -23,7 +23,7 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <NavLink  className="btn">Order Now</NavLink>
+                                                <Link  className="btn">Order Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -42,7 +42,7 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <NavLink className="btn">Order Now</NavLink>
+                                                <Link className="btn">Order Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@ const TitleComp = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">Delicious Cakes</h5>
                                                 <p className="card-text">Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.</p>
-                                                <NavLink className="btn">Order Now</NavLink>
+                                                <Link className="btn">Order Now</Link>
                                             </div>
                                         </div>
                                     </div>
