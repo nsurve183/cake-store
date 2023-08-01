@@ -11,7 +11,7 @@ const NavbarComp = () => {
     <>
       <section className='img_section'>
       <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-transparat">
+      <nav className="navbar navbar-expand-lg navbar-light bg-transparat d-flex justify-content-between">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">Cakkery</NavLink>
 
@@ -34,6 +34,8 @@ const NavbarComp = () => {
                   <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
                 </li>
               </ul>
+              <NavLink className='btn btn-outline-warning btn-sm ms-sm-3 text-white mt-lg-0 mt-2' to={'/signup'} style={{fontSize: "15px", letterSpacing: '1px'}} >Signup</NavLink>
+              <NavLink className='btn btn-outline-warning btn-sm ms-3 text-white mt-lg-0 mt-2' to={'/login'} style={{fontSize: "15px", letterSpacing: '1px'}} >Login</NavLink>
             </div>
           </div>
         </nav>

@@ -9,6 +9,8 @@ import Contact from './components/Contact'
 import FooterComp from './components/FooterComp'
 import CakeState from './context/cakes/CakeState'
 import ReduceCode from './components/ReduceCode'
+import Signup from './components/Signup'
+import Login from './components/Login'
 
 
 import {
@@ -16,6 +18,7 @@ import {
   Route,
   Routes
 } from 'react-router-dom'
+
 
 const App = () => {
   return (
@@ -32,6 +35,8 @@ const App = () => {
           <Route exact path='/birthdaycake' Component={ReduceCode}/>
           <Route exact path='/cupcake' Component={ReduceCode}/>
           <Route exact path='/partycake' Component={ReduceCode}/>
+          <Route exact path='/signup' Component={Signup}/>
+          <Route exact path='/login' Component={Login} />
         </Routes>
         <FooterComp />
       </Router>
