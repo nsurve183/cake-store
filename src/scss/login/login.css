@@ -1,0 +1,81 @@
+.loginsection {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loginsection .login_title {
+  font-size: 47px;
+  font-family: "Dancing Script", cursive;
+}
+.loginsection .container .card {
+  box-shadow: 0px 0px 23px 5px orange;
+}
+.loginsection .container .card .card-header {
+  display: grid;
+  place-items: center;
+}
+.loginsection .container .card .card-header .user_icon {
+  display: grid;
+  place-items: center;
+}
+.loginsection .container .card .card-header .img-fluid {
+  width: 130px;
+}
+.loginsection .container .card .card-header .fa-user {
+  font-size: 71px;
+}
+.loginsection .container ::-moz-placeholder {
+  font-size: 17px;
+}
+.loginsection .container ::placeholder {
+  font-size: 17px;
+}
+.loginsection .container .text_lable {
+  font-size: 17px;
+}
+.loginsection .container .btn {
+  background: orange;
+  border-radius: 0px;
+  padding: 9px 38px;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.loginsection .container .error {
+  color: red;
+  display: block;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .loginsection .login_title {
+    font-size: 37px;
+  }
+  .loginsection .container .btn {
+    background: orange;
+    border-radius: 0px;
+    padding: 7px 33px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .loginsection .login_title {
+    font-size: 33px;
+  }
+  .loginsection .container .card {
+    box-shadow: none;
+  }
+  .loginsection .container .card .card-header .img-fluid {
+    width: 114px;
+  }
+  .loginsection .container .btn {
+    padding: 8px 31px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=login.css.map */

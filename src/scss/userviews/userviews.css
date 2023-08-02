@@ -1,0 +1,77 @@
+.user_views {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user_views .user_view_title {
+  font-size: 47px;
+  font-family: "Dancing Script", cursive;
+}
+.user_views .container .card {
+  box-shadow: 0px 0px 23px 5px orange;
+}
+.user_views .container .card .user_icon {
+  display: grid;
+  place-items: center;
+}
+.user_views .container .card .card-img-top {
+  width: 209px;
+}
+.user_views .container .card .fa-user {
+  font-size: 71px;
+}
+.user_views .container ::-moz-placeholder {
+  font-size: 17px;
+}
+.user_views .container ::placeholder {
+  font-size: 17px;
+}
+.user_views .container .text_lable {
+  font-size: 17px;
+}
+.user_views .container .btn {
+  background: orange;
+  border-radius: 0px;
+  padding: 9px 38px;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.user_views .container .error {
+  color: red;
+  display: block;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .user_views .user_view_title {
+    font-size: 37px;
+  }
+  .user_views .container .card .card-img-top {
+    width: 182px;
+  }
+  .user_views .container .btn {
+    background: orange;
+    border-radius: 0px;
+    padding: 7px 33px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .user_views .user_view_title {
+    font-size: 33px;
+  }
+  .user_views .container .card .card-img-top {
+    width: 145px;
+  }
+  .user_views .container .btn {
+    padding: 8px 31px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=userviews.css.map */

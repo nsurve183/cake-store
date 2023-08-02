@@ -23,9 +23,6 @@
   text-decoration: none;
   color: black;
 }
-.productsection .product .img-fluid {
-  height: 223px;
-}
 
 @media (min-width: 576px) and (max-width: 767px) {
   .productsection .product_title {

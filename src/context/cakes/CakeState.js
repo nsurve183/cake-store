@@ -85,8 +85,6 @@ const CakeState = (props) => {
 
 
 
-
-
     // add user data for contact cakkery
     const addContactUser = async (fname, lname, email, phnumber, massage) => {
         const response = await fetch(`${host}/api/contact/usercontact`, {
@@ -100,9 +98,21 @@ const CakeState = (props) => {
         setcontact(contact.concat(contactUser))
     }
 
+    const fetchUserViews = async () => {
+        const response = await fetch(`${host}/api/view/fetchuserviews`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "token": localStorage.getItem('token')
+            },
+        })
+        let userviews = await response.json()
+        setViews(userviews)
+    }
+
     return(
         <>
-            <CakeContext.Provider value={{view, getViewData, totalrecords, postperpage, currentPage, birthdaycakedata, setcurrentPage, addContactUser, errorAlert, showAlert, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake}}>
+            <CakeContext.Provider value={{view, getViewData, totalrecords, postperpage, currentPage, birthdaycakedata, setcurrentPage, addContactUser, errorAlert, showAlert, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake, fetchUserViews}}>
                 {props.children}
             </CakeContext.Provider>
         </>

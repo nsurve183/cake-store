@@ -7,10 +7,12 @@ import About from './components/About'
 import Product from './components/Product'
 import Contact from './components/Contact'
 import FooterComp from './components/FooterComp'
-import CakeState from './context/cakes/CakeState'
 import ReduceCode from './components/ReduceCode'
 import Signup from './components/Signup'
 import Login from './components/Login'
+import CakeState from './context/cakes/CakeState'
+import AuthState from './context/cakes/AuthState'
+import Addviews from './components/Addviews'
 
 
 import {
@@ -24,6 +26,7 @@ const App = () => {
   return (
     <>
     <CakeState>
+    <AuthState>
       <Router>
       <NavbarComp/>
         <Routes>
@@ -37,9 +40,11 @@ const App = () => {
           <Route exact path='/partycake' Component={ReduceCode}/>
           <Route exact path='/signup' Component={Signup}/>
           <Route exact path='/login' Component={Login} />
+          <Route exact path='/addviews' Component={Addviews} />
         </Routes>
         <FooterComp />
       </Router>
+      </AuthState>
       </CakeState>
     </>
   )

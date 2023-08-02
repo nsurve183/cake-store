@@ -22,8 +22,6 @@ const ViewsPegination = () => {
           return <button className={`btn btn-warning btn-sm mx-1 text-white ${(page === currentPage) ? "active": ""}`} key={index} onClick={() => { setcurrentPage(page); getViewData() }
           }>{page}</button>
         })}
-        {/* <button className='btn btn-primary btn-sm' onClick={prev()}>Prev</button>
-          <button className='btn btn-primary btn-sm' onClick={next()}>Next</button> */}
       </div>
     </div>
   )

@@ -27,6 +27,11 @@
   font-weight: 700;
   font-family: sans-serif;
 }
+.contactsection .container .error {
+  color: red;
+  display: block;
+  font-weight: 600;
+}
 
 @media (min-width: 576px) and (max-width: 767px) {
   .productsection .product_title {

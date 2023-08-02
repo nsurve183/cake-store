@@ -43,8 +43,6 @@ router.post('/createusers', [
         let authtoken = jwt.sign(data, secret_msg)
         res.json({authtoken});
 
-        console.log(authtoken)
-
     } catch (error) {
         console.error(error.massage);
         res.status(500).send('Create Users Error Occured');

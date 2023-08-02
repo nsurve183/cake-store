@@ -10,11 +10,16 @@ const Views = () => {
     const context = useContext(CakeContext)
 
     //this state use fetch user views
-    const { view, getViewData } = context
+    const { view, getViewData, fetchUserViews } = context
 
     useEffect(() => {
-        getViewData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        if(localStorage.getItem('token')){
+            fetchUserViews();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }else{
+            getViewData();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }
     }, [])
 
     return (
