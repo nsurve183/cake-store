@@ -2,6 +2,10 @@
 .img_section {
   background-color: rgba(40, 26, 0, 0.8509803922);
 }
+.img_section .container .navbar {
+  position: sticky;
+  width: 100%;
+}
 .img_section .container .navbar .navbar-brand {
   font-weight: bold;
   color: white;

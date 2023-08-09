@@ -1,8 +1,10 @@
 
 
-import React, { useContext } from 'react'
+import React, {useContext} from 'react'
+import CakeContext from '../context/cakes/CakeContext';
 import '../scss/views/views.scss'
-import CakeContext from '../context/cakes/CakeContext'
+
+
 
 
 const ViewsPegination = () => {
@@ -19,7 +21,10 @@ const ViewsPegination = () => {
     <div>
       <div className="pagination">
         {pages.map((page, index) => {
-          return <button className={`btn btn-warning btn-sm mx-1 text-white ${(page === currentPage) ? "active": ""}`} key={index} onClick={() => { setcurrentPage(page); getViewData() }
+          return <button className={`btn btn-warning btn-sm mx-1 text-white ${(page === currentPage) ? "active": ""}`} key={index} onClick={() => {
+            setcurrentPage(page);
+           getViewData();
+           }
           }>{page}</button>
         })}
       </div>

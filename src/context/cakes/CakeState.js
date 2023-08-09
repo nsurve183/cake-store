@@ -4,52 +4,18 @@ import { useState } from "react";
 import CakeContext from "./CakeContext";
 
 const CakeState = (props) => {
-    
-    const host = "http://localhost:5000";   
+
+    const host = "http://localhost:5000";
 
 
     // this state for userviews
     const [view, setViews] = useState([])
-    
-  
 
     // this state for contact page
     const [contact, setcontact] = useState([])
-
-    // for alert massage
-    const [errorAlert, setErrorAlert] = useState({})
-
-    let showAlert = (msg, type) => {
-        setErrorAlert({
-          massage: msg,
-          type: type
-        })
-    }
-
-
-    // for pegination of views
-    const [currentPage, setcurrentPage] = useState(1);
-    const [postperpage, setpostperpage] = useState(3)
-    const [totalrecords, setTotalReacords] = useState()
-
-    // fetch user views data
-    const getViewData = async () => {
-        const response = await fetch(`${host}/api/view/getuserviews`, {
-            method: "GET"
-        })
-        let userviews = await response.json()
-        setTotalReacords(userviews.length)
-        const lastPostinidex = currentPage * postperpage 
-        const firstPostIndex = lastPostinidex - postperpage
-
-        const currentPost = userviews.slice(firstPostIndex, lastPostinidex,  )
-        setViews(currentPost)
-    }
-
-
-    
-      // this state for fetch cakes category data
-      const [birthdaycakedata, setBirthCakeData] = useState([])
+  
+    // this state for fetch cakes category data
+    const [birthdaycakedata, setBirthCakeData] = useState([])
     // fetch birth day cake data
     const getBirthDayCakesData = async () => {
         const response = await fetch(`${host}/api/cakescategory/getbirthdaycakes`, {
@@ -84,7 +50,6 @@ const CakeState = (props) => {
     }
 
 
-
     // add user data for contact cakkery
     const addContactUser = async (fname, lname, email, phnumber, massage) => {
         const response = await fetch(`${host}/api/contact/usercontact`, {
@@ -92,27 +57,74 @@ const CakeState = (props) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({fname, lname, email, phnumber, massage})
+            body: JSON.stringify({ fname, lname, email, phnumber, massage })
         })
         let contactUser = await response.json()
         setcontact(contact.concat(contactUser))
     }
 
-    const fetchUserViews = async () => {
-        const response = await fetch(`${host}/api/view/fetchuserviews`, {
-            method: "GET",
+
+    // add user views
+    const addUserViews = async (name, description) => {
+        const response = await fetch(`${host}/api/view/addviews`, {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "token": localStorage.getItem('token')
             },
+            body: JSON.stringify({ name, description })
         })
-        let userviews = await response.json()
-        setViews(userviews)
+        let views = await response.json()
+        setViews(view.concat(views))
+        console.log(views)
     }
 
-    return(
+
+    // edit user note 
+    const editUserView = async (id, name, description) => {
+        const response = await fetch(`${host}/api/view/editview/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "token": localStorage.getItem('token')
+            },
+            body: JSON.stringify({ name, description })
+        })
+        const json = await response.json()
+        console.log("editView", json)
+
+        let newView = JSON.parse(JSON.stringify(view))
+        // edit view code
+        for (let index = 0; index < newView.length; index++) {
+          const element = newView[index];
+          if (element._id === id) {
+            newView[index].name = name;
+            newView[index].description = description;
+            break;
+        }
+    }
+        setViews(newView);
+    }
+
+    const deleteUser = async (id) => {
+        const response = await fetch(`${host}/api/view/deleteview/${id}`, {
+            method: "DELETE",
+            headers: {
+              "token": localStorage.getItem('token')
+            },
+          })
+          const deleteview = await response.json()
+          console.log(deleteview);
+          const newview = view.filter((val) => { return val._id !== id });
+          alert("View Is Deleted");
+          setViews(newview);
+    }
+
+    
+
+    return (
         <>
-            <CakeContext.Provider value={{view, getViewData, totalrecords, postperpage, currentPage, birthdaycakedata, setcurrentPage, addContactUser, errorAlert, showAlert, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake, fetchUserViews}}>
+            <CakeContext.Provider value={{ view, birthdaycakedata, addContactUser, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake, addUserViews, setViews, editUserView, deleteUser}}>
                 {props.children}
             </CakeContext.Provider>
         </>

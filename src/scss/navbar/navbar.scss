@@ -7,6 +7,8 @@
     background-color: #281a00d9;
     .container {
         .navbar {
+            position: sticky;
+            width: 100%;
             .navbar-brand {
                 font-weight: bold;
                 color: white;
