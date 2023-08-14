@@ -40,7 +40,7 @@ const ReduceCode = () => {
               {birthdaycakedata.map((val) => {
                 return <div className="col-lg-3 col-sm-6 col-12 mb-3" key={val._id}>
                   <div className="card">
-                    <img src="/images/cake2.jpg" className="card-img-top" alt="..." />
+                    <img src={`/images/${val.image}`} className="card-img-top" alt="..." />
                     <div className="card-body text-center">
                       <h5 className="card-title">{val.title}</h5>
                       <p className="card-text">{val.description}</p>

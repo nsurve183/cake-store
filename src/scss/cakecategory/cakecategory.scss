@@ -1,0 +1,103 @@
+
+
+.cakeCategory {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .cakecategory_title {
+        font-size: 43px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .container {
+        .card {
+            box-shadow: 0px 0px 23px 5px orange;
+                .user_icon {
+                    display: grid;
+                    place-items: center;
+                }
+
+                .card-img-top {
+                    width: 209px;
+                }
+
+                .fa-user {
+                    font-size: 71px;
+                }
+            }
+
+        ::placeholder {
+            font-size: 17px;
+        }
+
+        .text_lable {
+            font-size: 17px;
+        }
+
+        .btn {
+            background: orange;
+            border-radius: 0px;
+            padding: 9px 38px;
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+
+        .error {
+            color: red;
+            display: block;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .cakeCategory {
+        .cakecategory_title {
+            font-size: 37px;
+        }
+
+        .container {
+            .card {
+                .card-img-top {
+                    width: 182px;
+                }
+            }
+
+            .btn {
+                background: orange;
+                border-radius: 0px;
+                padding: 7px 33px;
+                font-size: 16px;
+                color: white;
+                font-weight: 700;
+                font-family: sans-serif;
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+    .cakeCategory {
+        .cakecategory_title {
+            font-size: 33px;
+        }
+
+        .container {
+            .card {
+                .card-img-top {
+                    width: 145px;
+                }
+            }
+
+            .btn {
+                padding: 8px 31px;
+                font-size: 14px;
+            }
+        }
+    }
+}

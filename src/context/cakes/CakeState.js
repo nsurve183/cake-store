@@ -120,8 +120,6 @@ const CakeState = (props) => {
           setViews(newview);
     }
 
-    
-
     return (
         <>
             <CakeContext.Provider value={{ view, birthdaycakedata, addContactUser, getBirthDayCakesData, getWeddingCakes, getCupCakes, getPartyCake, addUserViews, setViews, editUserView, deleteUser}}>

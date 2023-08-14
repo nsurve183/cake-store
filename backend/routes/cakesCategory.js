@@ -6,14 +6,30 @@ const WeddingCake = require('../models/WeddingCake')
 const PartyCakes = require('../models/PartyCake') 
 const CupCakes = require('../models/CupCake')
 const {body, validationResult} = require('express-validator');
+const path = require('path');
+const multer = require('multer');
 const router = express.Router();
 
 
-router.post('/birthdaycakes',[
-    body('title', 'Fname should be minimum 2 characters').isLength({min: 2}),
+
+// middleware functon for store image in database
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/images')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+
+const upload = multer({storage: storage});
+
+
+router.post('/birthdaycakes', upload.single('file'), [
+    body('title', 'title should be minimum 2 characters').isLength({min: 2}),
     body('description', 'description should be minimum 7 characters').isLength({min: 7}),
-], async (req, res) => {
-    console.log(req)
+],  async (req, res) => {
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -23,8 +39,10 @@ router.post('/birthdaycakes',[
             title: req.body.title,
             description: req.body.description,
             cost: req.body.cost,
+            image: req.file.filename
         })
-        res.json({birthdaycake})
+        res.json({birthdaycake});
+        console.log(birthdaycake)
     } catch (error) {
         console.error(error);
         res.status(500).send('Somme Error Occured');
@@ -152,7 +170,6 @@ router.get('/getcupcakes', async (req, res) => {
         res.status(500).send('Cup Cake data error');
     }
 })
-
 
 module.exports = router;
 

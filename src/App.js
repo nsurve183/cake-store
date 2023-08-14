@@ -20,6 +20,8 @@ import {
   Route,
   Routes
 } from 'react-router-dom'
+import AddBirthCake from './components/AddBirthCake'
+import CategoryState from './context/cakes/CategoryState'
 
 
 const App = () => {
@@ -27,6 +29,7 @@ const App = () => {
     <>
     <CakeState>
     <AuthState>
+    <CategoryState>
       <Router>
       <NavbarComp/>
         <Routes>
@@ -41,9 +44,11 @@ const App = () => {
           <Route exact path='/signup' Component={Signup}/>
           <Route exact path='/login' Component={Login} />
           <Route exact path='/addviews' Component={Addviews} />
+          <Route exact path='/addbirthdaycake' Component={AddBirthCake}/>
         </Routes>
         <FooterComp />
       </Router>
+      </CategoryState>
       </AuthState>
       </CakeState>
     </>
