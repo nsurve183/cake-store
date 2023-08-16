@@ -15,6 +15,9 @@ const WeddingCakeSchema = mongoose.Schema({
         type: Number,
         require: true
     },
+    image: {
+        type: String
+    },
     timestamp : {
         type: Date,
         default: Date.now

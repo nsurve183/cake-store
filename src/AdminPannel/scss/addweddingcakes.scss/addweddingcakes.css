@@ -1,0 +1,77 @@
+.cakeCategory {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cakeCategory .cakecategory_title {
+  font-size: 43px;
+  font-family: "Dancing Script", cursive;
+}
+.cakeCategory .container .card {
+  box-shadow: 0px 0px 23px 5px orange;
+}
+.cakeCategory .container .card .user_icon {
+  display: grid;
+  place-items: center;
+}
+.cakeCategory .container .card .card-img-top {
+  width: 209px;
+}
+.cakeCategory .container .card .fa-user {
+  font-size: 71px;
+}
+.cakeCategory .container ::-moz-placeholder {
+  font-size: 17px;
+}
+.cakeCategory .container ::placeholder {
+  font-size: 17px;
+}
+.cakeCategory .container .text_lable {
+  font-size: 17px;
+}
+.cakeCategory .container .btn {
+  background: orange;
+  border-radius: 0px;
+  padding: 9px 38px;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.cakeCategory .container .error {
+  color: red;
+  display: block;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .cakeCategory .cakecategory_title {
+    font-size: 37px;
+  }
+  .cakeCategory .container .card .card-img-top {
+    width: 182px;
+  }
+  .cakeCategory .container .btn {
+    background: orange;
+    border-radius: 0px;
+    padding: 7px 33px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .cakeCategory .cakecategory_title {
+    font-size: 33px;
+  }
+  .cakeCategory .container .card .card-img-top {
+    width: 145px;
+  }
+  .cakeCategory .container .btn {
+    padding: 8px 31px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=addweddingcakes.css.map */

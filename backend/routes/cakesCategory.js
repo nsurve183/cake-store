@@ -26,6 +26,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 
+// add birthday cakes
 router.post('/birthdaycakes', upload.single('file'), [
     body('title', 'title should be minimum 2 characters').isLength({min: 2}),
     body('description', 'description should be minimum 7 characters').isLength({min: 7}),
@@ -50,26 +51,24 @@ router.post('/birthdaycakes', upload.single('file'), [
 })
 
 
-
-// wedding cake
-router.post('/weddingcake', [
-    body('title', 'Title should be minimum 2 characters').isLength({min: 2}),
-    body('description', 'Description should be minimum 7 characters').isLength({min: 7}),
-], async (req, res) => {
+// add wedding cakes
+router.post('/weddingcake', upload.single('file'), [
+    body('title', 'title should be minimum 2 characters').isLength({min: 2}),
+    body('description', 'description should be minimum 7 characters').isLength({min: 7}),
+],  async (req, res) => {
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({errors: errors.array()});
-          } 
-
-          let wcake = await WeddingCake.create({
+          }
+        let weddingcakeData = await WeddingCake.create({
             title: req.body.title,
             description: req.body.description,
-            cost: req.body.cost
-          })
-        //   console.log("🚀 ~ file: chocolateCake.js:50 ~ ], ~ weddingc̥ake:", wcake)
-          res.json({wcake})
-          console.log(wcake)
+            cost: req.body.cost,
+            image: req.file.filename
+        })
+        res.json({weddingcakeData});
+        console.log(weddingcakeData)
     } catch (error) {
         console.error(error);
         res.status(500).send('Somme Error Occured');
@@ -77,54 +76,54 @@ router.post('/weddingcake', [
 })
 
 
-// cup cakes
-router.post('/cupcakes', [
-    body('title', 'Title should be minimum 2 characters').isLength({min: 2}),
-    body('description', 'Description should be minimum 7 characters').isLength({min: 7}),
-], async (req, res) => {
+// add Party cakes
+router.post('/partycakes', upload.single('file'), [
+    body('title', 'title should be minimum 2 characters').isLength({min: 2}),
+    body('description', 'description should be minimum 7 characters').isLength({min: 7}),
+],  async (req, res) => {
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({errors: errors.array()});
-          } 
-
-          let cupcake = await CupCakes.create({
+          }
+        let partycakesdata = await PartyCakes.create({
             title: req.body.title,
             description: req.body.description,
-            cost: req.body.cost
-          })
-          console.log("🚀 ~ file: cakesCategory.js:77 ~ ], ~ cupcake:", cupcake)
-          res.json({cupcake})
-          console.log(cupcake)
+            cost: req.body.cost,
+            image: req.file.filename
+        })
+        res.json({partycakesdata});
     } catch (error) {
         console.error(error);
         res.status(500).send('Somme Error Occured');
     }
 })
 
-// party cake
-router.post('/partycakes', [
-    body('title', 'Title should be minimum 2 characters').isLength({min: 2}),
-    body('description', 'Description should be minimum 7 characters').isLength({min: 7}),
-], async (req, res) => {
+
+
+// add cup cakes
+router.post('/cupcakes', upload.single('file'), [
+    body('title', 'title should be minimum 2 characters').isLength({min: 2}),
+    body('description', 'description should be minimum 7 characters').isLength({min: 7}),
+],  async (req, res) => {
     try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({errors: errors.array()});
-          } 
-
-          let partycake = await PartyCakes.create({
+          }
+        let cupcakesdata = await CupCakes.create({
             title: req.body.title,
             description: req.body.description,
-            cost: req.body.cost
-          })
-          console.log("🚀 ~ file: cakesCategory.js:103 ~ ], ~ partycake:", partycake)
-          res.json({partycake})
+            cost: req.body.cost,
+            image: req.file.filename
+        })
+        res.json({cupcakesdata});
     } catch (error) {
         console.error(error);
         res.status(500).send('Somme Error Occured');
     }
 })
+
 
 
 // get birthday cakes date

@@ -20,7 +20,10 @@ import {
   Route,
   Routes
 } from 'react-router-dom'
-import AddBirthCake from './components/AddBirthCake'
+import AddBirthCake from './AdminPannel/Components/AddBirthCake'
+import AddWeddingCakes from './AdminPannel/Components/AddWeedingCakes'
+import AddPartyCakes from './AdminPannel/Components/AddPrtyCakes'
+import AddCupCakes from './AdminPannel/Components/AddCupCakes'
 import CategoryState from './context/cakes/CategoryState'
 
 
@@ -45,6 +48,9 @@ const App = () => {
           <Route exact path='/login' Component={Login} />
           <Route exact path='/addviews' Component={Addviews} />
           <Route exact path='/addbirthdaycake' Component={AddBirthCake}/>
+          <Route exact path='/addweddingcakes' Component={AddWeddingCakes}/>
+          <Route exact path='/addpartycakes' Component={AddPartyCakes}/>
+          <Route exact path='/addcupcakes' Component={AddCupCakes}/>
         </Routes>
         <FooterComp />
       </Router>
