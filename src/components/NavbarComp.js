@@ -1,12 +1,13 @@
 
 
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import '../scss/navbar/navbar.css'
 
 
 const NavbarComp = () => {
   const navigate = useNavigate();
+  const location = useLocation()
   const logout = () => {
     localStorage.removeItem('token')
     alert("Logout Successfully")
@@ -14,7 +15,7 @@ const NavbarComp = () => {
   }
   return (
     <>
-      <section className='img_section'>
+    {(location.pathname === '/adminui') ? "" : <section className='img_section'>
       <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-transparat d-flex justify-content-between">
           <div className="container-fluid">
@@ -53,7 +54,8 @@ const NavbarComp = () => {
           </div>
         </nav>
       </div>
-      </section>
+      </section>}
+      
     </>
   )
 }

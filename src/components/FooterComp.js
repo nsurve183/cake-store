@@ -2,12 +2,15 @@
 
 import React from 'react'
 import '../scss/footercomp/footercomp.scss'
+import { useLocation } from 'react-router-dom'
 
 const FooterComp = () => {
     const footerDate = new Date().getFullYear()
+    const location = useLocation()
     return (
         <div>
-            <div className="footersection">
+        {(!location.pathname === '/adminui') ? 
+        <div className="footersection">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -51,7 +54,8 @@ const FooterComp = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> : ""}
+            
         </div>
     )
 }

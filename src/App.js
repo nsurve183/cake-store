@@ -18,23 +18,21 @@ import Addviews from './components/Addviews'
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
 } from 'react-router-dom'
-import AddBirthCake from './AdminPannel/Components/AddBirthCake'
-import AddWeddingCakes from './AdminPannel/Components/AddWeedingCakes'
-import AddPartyCakes from './AdminPannel/Components/AddPrtyCakes'
-import AddCupCakes from './AdminPannel/Components/AddCupCakes'
-import CategoryState from './context/cakes/CategoryState'
+import PageNotFound from './components/PageNotFound'
+import AddBirthDayCakes from './components/AddBirthDayCakes'
+import AddWeddingCakes from './components/AddWeddingCakes'
+import AddPartyCakes from './components/AddPartyCakes'
+import AddCupCakes from './components/AddCupCakes'
 
 
 const App = () => {
   return (
-    <>
     <CakeState>
     <AuthState>
-    <CategoryState>
       <Router>
-      <NavbarComp/>
+      <NavbarComp />
         <Routes>
           <Route exact path='/' Component={Home}/>
           <Route exact path='/about' Component={About}/>
@@ -47,17 +45,16 @@ const App = () => {
           <Route exact path='/signup' Component={Signup}/>
           <Route exact path='/login' Component={Login} />
           <Route exact path='/addviews' Component={Addviews} />
-          <Route exact path='/addbirthdaycake' Component={AddBirthCake}/>
-          <Route exact path='/addweddingcakes' Component={AddWeddingCakes}/>
-          <Route exact path='/addpartycakes' Component={AddPartyCakes}/>
-          <Route exact path='/addcupcakes' Component={AddCupCakes}/>
+          <Route exact path='/addbirthdaycakes' Component={AddBirthDayCakes} />
+          <Route exact path='/addweddingcakes' Component={AddWeddingCakes} />
+          <Route exact path='/addpartycakes' Component={AddPartyCakes} />
+          <Route exact path='/addcupcakes' Component={AddCupCakes} />
+         <Route path='*' Component={PageNotFound}/>
         </Routes>
         <FooterComp />
       </Router>
-      </CategoryState>
       </AuthState>
       </CakeState>
-    </>
   )
 }
 

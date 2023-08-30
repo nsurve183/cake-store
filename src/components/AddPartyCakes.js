@@ -1,25 +1,21 @@
 
-
-
-
 import React, { useState } from 'react'
-import '../../scss/cakecategory/cakecategory.css'
+import '../scss/cakecategory/cakecategory.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 
-// import { CategoryContext } from '../context/cakes/CakeContext
 
-
-const AddPartyCakes = () => {
+const AddWeddingCakes = () => {
     const [file, setfile] = useState()
     const [title, setTitle] = useState()
     const [desc, setDesc] = useState()
     const [cost, setCost] = useState()
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formdata = new FormData()
         formdata.append('title', title)
@@ -27,16 +23,15 @@ const AddPartyCakes = () => {
         formdata.append('cost', cost)
         formdata.append('file', file)
         try {
-            axios.post('http://localhost:5000/api/cakescategory/partycakes', formdata)
-                .then((resp) => {
-                    if(resp){
-                        alert("Data Added Successfully");
-                        navigate('/partycake');
-                    }
+            await axios.post('http://localhost:5000/api/cakescategory/partycakes', formdata)
+                .then((res) => {
+                    console.log(res)
                 })
             } catch (error) {
                 console.log(error)
             }
+            alert('Data Added');
+            navigate('/partycake')
     }
 
 
@@ -55,29 +50,28 @@ const AddPartyCakes = () => {
                                 <div className="card-body">
                                     <div className="row d-flex justify-content-center align-items-center">
                                         <div className="col-12">
-                                            <h5 className="card-title cakecategory_title">Add Party Cakes</h5>
+                                            <h5 className="card-title cakecategory_title">Add  Party Cakes</h5>
                                         </div>
                                         <div className="col-12 mt-3">
                                             <form onSubmit={handleSubmit} method='POST'>
                                                 <div className="mb-3">
                                                     <label htmlFor="title" className="form-label text-start d-block">Title</label>
                                                     <input type="text" className="form-control" name='title' id="title"
-                                                        onChange={(e) => setTitle(e.target.value)} 
-                                                    required/>
+                                                        onChange={(e) => setTitle(e.target.value)}
+                                                    />
                                                 </div>
                                                 <div className="mb-3">
                                                     <label htmlFor="description" className="form-label text-start d-block"> Description</label>
-                                                    <input type="description" className="form-control" id="description" name='description' onChange={(e) => setDesc(e.target.value)} required/>
+                                                    <input type="description" className="form-control" id="description" name='description' onChange={(e) => setDesc(e.target.value)} />
                                                 </div>
                                                 <div className="mb-3">
                                                     <label htmlFor="cost" className="form-label text-start d-block"> Cost</label>
-                                                    <input type="number" className="form-control" id="cost" name='cost' onChange={(e) => setCost(e.target.value)} required/>
+                                                    <input type="number" className="form-control" id="cost" name='cost' onChange={(e) => setCost(e.target.value)} />
                                                 </div>
                                                 <div className="mb-3">
                                                     <label htmlFor="file" className="form-label text-start d-block"> Image Upload</label>
                                                     <input type="file" className="form-control" id="file" name='file'
-                                                        onChange={(e) => setfile(e.target.files[0]) }
-                                                        required
+                                                        onChange={(e) => setfile(e.target.files[0])}
                                                     />
                                                 </div>
                                                 <button type='submit' className='btn mt-3'>Submit</button>
@@ -94,4 +88,4 @@ const AddPartyCakes = () => {
     )
 }
 
-export default AddPartyCakes
+export default AddWeddingCakes;

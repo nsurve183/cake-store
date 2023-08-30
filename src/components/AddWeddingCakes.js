@@ -1,22 +1,19 @@
 
-
 import React, { useState } from 'react'
-import '../../scss/cakecategory/cakecategory.css'
+import '../scss/cakecategory/cakecategory.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 
-// import { CategoryContext } from '../context/cakes/CakeContext
 
-
-
-const AddBirthCake = () => {
+const AddWeddingCakes = () => {
     const [file, setfile] = useState()
     const [title, setTitle] = useState()
     const [desc, setDesc] = useState()
     const [cost, setCost] = useState()
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,14 +23,15 @@ const AddBirthCake = () => {
         formdata.append('cost', cost)
         formdata.append('file', file)
         try {
-            await axios.post('http://localhost:5000/api/cakescategory/birthdaycakes', formdata)
+            await axios.post('http://localhost:5000/api/cakescategory/weddingcake', formdata)
                 .then((res) => {
                     console.log(res)
                 })
             } catch (error) {
                 console.log(error)
             }
-            navigate('/birthdaycake')
+            alert('Data Added');
+            navigate('/weddingcake')
     }
 
 
@@ -52,7 +50,7 @@ const AddBirthCake = () => {
                                 <div className="card-body">
                                     <div className="row d-flex justify-content-center align-items-center">
                                         <div className="col-12">
-                                            <h5 className="card-title cakecategory_title">Add Birth Day Cakes</h5>
+                                            <h5 className="card-title cakecategory_title">Add Wedding Cakes</h5>
                                         </div>
                                         <div className="col-12 mt-3">
                                             <form onSubmit={handleSubmit} method='POST'>
@@ -90,4 +88,4 @@ const AddBirthCake = () => {
     )
 }
 
-export default AddBirthCake
+export default AddWeddingCakes;

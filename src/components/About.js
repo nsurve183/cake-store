@@ -1,7 +1,6 @@
 import React from 'react'
 import '../scss/about/about.css'
 
-
 const About = () => {
   return (
     <div>
